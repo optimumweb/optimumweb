@@ -1,0 +1,129 @@
+
+/* =============================================================================
+   Helpers
+   ========================================================================== */
+
+.no-padding { padding: 0 !important; }
+.no-margin { margin: 0 !important; }
+
+.page-section {
+  padding: 50px 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  &.slim {
+    padding: 20px 0;
+  }
+
+  &.large {
+    padding: 100px 0;
+  }
+
+  &.black { background-color: @black; }
+  &.light-grey { background-color: @lightGrey; }
+  &.dark-blue { background-color: @darkBlue; }
+  &.green { background-color: @green; }
+
+  &.black,
+  &.dark-blue,
+  &.green {
+    color: @white;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: @white;
+    }
+  }
+}
+
+.footer-section {
+  padding: 30px 0;
+
+  &.slim {
+    padding: 10px 0;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: @black;
+  text-decoration: none;
+  border: 2px solid @black;
+  .border-radius(@radius);
+  .transition();
+
+  &:hover {
+    background: @black;
+    color: @white;
+    text-decoration: none;
+  }
+
+  &.white {
+    border-color: @white;
+    color: @white;
+
+    &:hover {
+      background: @white;
+      color: @black;
+    }
+  }
+
+  &.blue {
+    .vertical-gradient(lighten(@blue,10%), darken(@blue,10%));
+    border: 1px solid darken(@blue,10%);
+    color: @white;
+
+    &:hover {
+      .vertical-gradient(lighten(@blue,15%), darken(@blue,5%));
+    }
+  }
+
+  &.spaced {
+    margin: 10px;
+  }
+
+  &.hspaced {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &.vspaced {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.spacer {
+  height: 1px;
+  margin: 1em 0;
+
+  &.small {
+    margin: 0.5em 0;
+  }
+
+  &.large {
+    margin: 2em 0;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.icon-fade {
+  background-color: @black;
+  .transition();
+
+  &:hover {
+    &.blue { background-color: @blue; }
+    &.green { background-color: @green; }
+    &.orange { background-color: @orange; }
+    &.purple { background-color: @purple; }
+  }
+}

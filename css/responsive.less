@@ -1,0 +1,35 @@
+.mobile-show { display: none; }
+
+#main-nav .tinynav { display: none; }
+
+@media screen and (max-width: 768px) {
+
+  .mobile-show { display: block; }
+  .mobile-hide { display: none; }
+
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.25em; }
+  h4 { font-size: 1.125em; }
+  h5 { font-size: 1em; }
+  h6 { font-size: 0.875em; }
+
+  .page-section {
+    padding: 20px 0;
+
+    &.large { padding: 40px 0; }
+    &.slim { padding: 10px 0; }
+  }
+
+  #header > .container {
+    padding: 10px 0;
+  }
+
+  #main-nav {
+    float: none;
+
+    .menu { display: none; }
+    .tinynav { display: block; }
+  }
+
+}

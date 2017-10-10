@@ -1,0 +1,162 @@
+
+/* =============================================================================
+   Theme
+   ========================================================================== */
+
+body {
+  font-family: @fontFamily;
+  color: @fontColor;
+  font-size: @fontSize;
+  background: @white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @black;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &.subheader {
+    font-weight: 300;
+  }
+
+  &.blue { color: @blue; }
+  &.green { color: @green; }
+  &.orange { color: @orange; }
+  &.purple { color: @purple; }
+}
+
+h1 { font-size: 3.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.125em; }
+h6 { font-size: 1em; }
+
+hgroup {
+  margin: 1em 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.25em 0;
+  }
+}
+
+hr {
+  border-color: @borderColor;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.full {
+    width: 100%;
+  }
+}
+
+p, span {
+  &.large { font-size: 1.25em; }
+  &.xlarge { font-size: 1.5em; }
+
+  &.subheader {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+}
+
+a {
+  color: @blue;
+}
+
+nav a {
+  color: @black60;
+  font-weight: bold;
+  text-decoration: none !important;
+  text-transform: uppercase;
+
+  &:hover {
+    color: @black;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+}
+
+#top {
+  display: none;
+}
+
+#toggle-top {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: block;
+  background: @green;
+  line-height: 1;
+  padding: 3px 6px;
+  color: @white;
+  text-decoration: none !important;
+}
+
+#header {
+  border-top: 3px solid @green;
+
+  > .container {
+    padding: 25px 0;
+  }
+}
+
+#main-nav {
+  float: right;
+  padding: 15px 0;
+
+  li {
+    display: block;
+    float: left;
+    margin: 0 5px;
+
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      border: 2px solid @transparent;
+      line-height: 21px;
+      color: @black !important;
+      .border-radius(@radius);
+    }
+
+    &.current-menu-item > a,
+    &:hover > a {
+      border-color: @black;
+    }
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+#recall {
+  p {
+    margin: 5px 0;
+  }
+}
+
+#footer {
+  font-size: 0.85em;
+}
+
+#footer-nav {
+  li {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+  }
+
+  a {
+    display: block;
+    line-height: 24px;
+  }
+}
