@@ -1,7 +1,8 @@
 <?php
 
 // ENQUEUE
-function enqueue() {
+function enqueue()
+{
 	if ( !is_admin() ) {
 	    // libs
 	    wpbp_enqueue_lib(array('modernizr', 'jquery', 'wpbp', 'tinyNav', 'animatedElement'));
@@ -14,3 +15,14 @@ function enqueue() {
 add_action('init', 'enqueue');
 
 wpbp_register_sidebars(array( 'Top', 'Recall', 'Footer A', 'Footer B', 'Footer C' ));
+
+function ow_register_meta_fields()
+{
+    register_meta( 'post', 'abc', array(
+        'type' => 'string',
+        'description' => 'ABC',
+        'single' => true,
+        'show_in_rest' => true
+    ) );
+}
+add_action( 'rest_api_init', 'ow_register_meta_fields' );
